@@ -1,15 +1,7 @@
 # ChatGPT-API Demo
 
-English | [简体中文](./README.zh-CN.md)
 
 A demo repo based on [OpenAI GPT-3.5 Turbo API.](https://platform.openai.com/docs/guides/chat)
-
-**🍿 Live preview**: https://chatgpt.ddiu.me
-
-> ⚠️ Notice: Our API Key limit has been exhausted. So the demo site is not available now.
-
-![chat-logo](https://cdn.staticaly.com/gh/yzh990918/static@master/chat-logo.webp)
-
 
 
 ## Running Locally
@@ -91,72 +83,6 @@ docker run --name=chatgpt-demo --volume=/path/.env:/usr/src/.env:rw -p 3000:3000
 ```
 `/path/.env` represents the path to the local environment variable.
 
-
-**Docker compose**
-```yml
-version: '3'
-
-services:
-  chatgpt-demo:
-    image: ddiu8081/chatgpt-demo:latest
-    container_name: chatgpt-demo
-    restart: always
-    ports:
-      - '3000:3000'
-    volumes:
-      - .env:/usr/src/.env
-```
-
-```bash
-# start
-docker compose up -d
-# down
-docker-compose down
-```
-
-### Deploy on more servers
-
-Please refer to the official deployment documentation：https://docs.astro.build/en/guides/deploy
-
-## Environment Variables
-
-You can control the website through environment variables.
-
-| Name | Description | Default |
-| --- | --- | --- |
-| `OPENAI_API_KEY` | Your API Key for OpenAI. | `null` |
-| `HTTPS_PROXY` | Provide proxy for OpenAI API. e.g. `http://127.0.0.1:7890` | `null` |
-| `OPENAI_API_BASE_URL` | Custom base url for OpenAI API. | `https://api.openai.com` |
-| `HEAD_SCRIPTS` | Inject analytics or other scripts before `</head>` of the page | `null` |
-| `SECRET_KEY` | Secret string for the project. Use for generating signatures for API calls | `null` |
-| `SITE_PASSWORD` | Set password for site, support multiple password separated by comma. If not set, site will be public | `null` |
-| `OPENAI_API_MODEL` | ID of the model to use. [List models](https://platform.openai.com/docs/api-reference/models/list) | `gpt-3.5-turbo` |
-
-
-## Frequently Asked Questions
-
-Q: TypeError: fetch failed (can't connect to OpenAI Api)
-
-A: Configure environment variables `HTTPS_PROXY`，reference: https://github.com/ddiu8081/chatgpt-demo/issues/34
-
-Q: throw new TypeError(${context} is not a ReadableStream.)
-
-A: The Node version needs to be `v18` or later，reference: https://github.com/ddiu8081/chatgpt-demo/issues/65
-
-Q: Accelerate domestic access without the need for proxy deployment tutorial?
-
-A: You can refer to this tutorial: https://github.com/ddiu8081/chatgpt-demo/discussions/270
-
-Q: `PWA` is not working?
-
-A: Current `PWA` does not support deployment on Netlify, you can choose vercel or node deployment.
-## Contributing
-
-This project exists thanks to all those who contributed.
-
-Thank you to all our supporters!🙏
-
-[![img](https://contributors.nn.ci/api?repo=ddiu8081/chatgpt-demo)](https://github.com/ddiu8081/chatgpt-demo/graphs/contributors)
 
 ## License
 
