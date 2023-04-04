@@ -69,16 +69,3 @@ A demo repo based on [OpenAI GPT-3.5 Turbo API.](https://platform.openai.com/doc
 3. Select the default build command and output directory, Click the `Deploy Site` button to start deploying the site。
 
 ![image](https://cdn.staticaly.com/gh/yzh990918/static@master/20230311/image.4jky9e1wbojk.webp)
-
-
-### Deploy with Docker
-
-Before deploying the app, please make sure `.env` is configured normally.
-
-Environment variables refer to the documentation below. [Docker Hub address](https://hub.docker.com/r/ddiu8081/chatgpt-demo).
-
-**Direct run**
-```bash
-docker run --name=chatgpt-demo --volume=/path/.env:/usr/src/.env:rw -p 3000:3000 -d ddiu8081/chatgpt-demo:latest
-```
-`/path/.env` represents the path to the local environment variable.
