@@ -82,8 +82,3 @@ Environment variables refer to the documentation below. [Docker Hub address](htt
 docker run --name=chatgpt-demo --volume=/path/.env:/usr/src/.env:rw -p 3000:3000 -d ddiu8081/chatgpt-demo:latest
 ```
 `/path/.env` represents the path to the local environment variable.
-
-
-## License
-
-MIT © [ddiu8081](https://github.com/ddiu8081/chatgpt-demo/blob/main/LICENSE)
